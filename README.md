@@ -1,3 +1,11 @@
+
+![image](https://user-images.githubusercontent.com/73658062/100642500-db0df700-335e-11eb-871d-4ae6b9998302.png)
+![image](https://user-images.githubusercontent.com/73658062/100642302-9eda9680-335e-11eb-8bec-f8a7d039e0d6.png)
+![image](https://user-images.githubusercontent.com/73658062/100642475-d2b5bc00-335e-11eb-80d5-66e8335a0bbd.png)
+![image](https://user-images.githubusercontent.com/73658062/100642224-866a7c00-335e-11eb-9341-700e2a62d3f3.png)
+![image](https://user-images.githubusercontent.com/73658062/100642871-5cfe2000-335f-11eb-8cbe-69ab96d59d2f.png)
+
+
 # UserRegistration
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
