@@ -1,7 +1,7 @@
 <div class="container">
   <div class="">
     <form class="formposition " #loginForm="ngForm">
-      <h1>sign Up</h1>
+      <h1>Sign Up</h1>
       <div [hidden]="loginForm.submitted">
         <div class="cross-validation">
           <div class="form-group">
@@ -40,7 +40,7 @@
                 Gender is required.
               </div>
 
-            </div><br>
+            </div><br><br>
             <label for="Email">Email</label><br>
             <input type="text" id="Email" name="Email" class="inputstyle" required [(ngModel)]="Email" #ename="ngModel">
 
@@ -205,24 +205,13 @@
               </div>
 
             </div><br>
-            <div class="form-group">
-              <label for="country">Country</label>
-              <select id="country" name="country" class="inputstyle" required [(ngModel)]="countrynames.country"
-                #countryname="ngModel">
-                <option *ngFor="let c of countryes" [value]="c">{{c}}</option>
-              </select>
-
-              <div *ngIf="countryname.errors && countryname.touched" class="alertdanger">
-                <div *ngIf="countryname.errors.required">state is required.</div>
-              </div>
-            </div>
-
 
           </div>
 
         </div>
-        <button type="submit"  [disabled]="loginForm.invalid">Submit</button>
-        <button type="button" class="buttonstylereset" (click)="loginForm.resetForm({})">Reset</button>
+        <br>
+        <button type="submit" [disabled]="loginForm.invalid">Submit</button>
+
       </div>
 
     </form>
