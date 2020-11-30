@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="">
+    <form class="formposition " #loginForm="ngForm">
+      <h1>Login</h1>
+      <div>
+        <div class="cross-validation">
+          <div class="form-group">
+            <label for="name">User Name</label><br>
+            <input type="name" id="name" name="name" class="inputstyle"  required [(ngModel)]="userName" #uname="ngModel">
+
+            <div *ngIf="uname.invalid && (uname.dirty || uname.touched)" class="alertdanger">
+
+              <div *ngIf="uname.errors.required">
+                Name is required.
+              </div>
+              
+            </div><br>
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" class="inputstyle"  required [(ngModel)]="password" #pname="ngModel">
+
+            <div *ngIf="pname.invalid && (pname.dirty || pname.touched)" class="alertdanger">
+
+              <div *ngIf="pname.errors.required">
+                Password is required.
+              </div>
+              
+            </div><br>
+            
+
+          </div>
+
+        </div>
+        <button (click)="login()"  [disabled]="loginForm.invalid">Login</button>
+      </div>
+      <p>Are you   <a [routerLink]="'/signup'">SignUp</a> </p>
+    </form>
+  </div>
+</div>
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
