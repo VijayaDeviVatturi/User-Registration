@@ -1,11 +1,12 @@
 
-![image](https://user-images.githubusercontent.com/73658062/100642500-db0df700-335e-11eb-871d-4ae6b9998302.png)
-![image](https://user-images.githubusercontent.com/73658062/100642302-9eda9680-335e-11eb-8bec-f8a7d039e0d6.png)
-![image](https://user-images.githubusercontent.com/73658062/100642475-d2b5bc00-335e-11eb-80d5-66e8335a0bbd.png)
-![image](https://user-images.githubusercontent.com/73658062/100642224-866a7c00-335e-11eb-9341-700e2a62d3f3.png)
-![image](https://user-images.githubusercontent.com/73658062/100642871-5cfe2000-335f-11eb-8cbe-69ab96d59d2f.png)
+![image](https://user-images.githubusercontent.com/73658062/100747526-2f20e600-3408-11eb-869a-9a1283a7e8b6.png)
 
-
+![image](https://user-images.githubusercontent.com/73658062/100747582-43fd7980-3408-11eb-9f85-f45aa05e9ceb.png)
+![image](https://user-images.githubusercontent.com/73658062/100747611-4bbd1e00-3408-11eb-8eec-2a97a3760c25.png)
+![image](https://user-images.githubusercontent.com/73658062/100747651-58417680-3408-11eb-9f3a-45c35b1b17ad.png)
+![image](https://user-images.githubusercontent.com/73658062/100747737-714a2780-3408-11eb-8e4d-c71a0d8e62e0.png)
+![image](https://user-images.githubusercontent.com/73658062/100747704-68595600-3408-11eb-9676-dd5ed15877c3.png)
+![image](https://user-images.githubusercontent.com/73658062/100747799-858e2480-3408-11eb-9fe6-e200bf25f64d.png)
 # UserRegistration
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
