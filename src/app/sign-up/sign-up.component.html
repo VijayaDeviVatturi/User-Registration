@@ -2,12 +2,11 @@
   <div class="">
     <form class="formposition " #loginForm="ngForm">
       <h1>Sign Up</h1>
-      <div [hidden]="loginForm.submitted">
+      <div>
         <div class="cross-validation">
           <div class="form-group">
-            <label for="name">First Name</label><br>
-            <input type="name" id="name" name="name" class="inputstyle" required [(ngModel)]="firstName"
-              #fname="ngModel">
+            <label for="name"> Name</label><br>
+            <input type="name" id="name" name="name" class="inputstyle" required [(ngModel)]="name" #fname="ngModel">
 
             <div *ngIf="fname.invalid && (fname.dirty || fname.touched)" class="alertdanger">
 
@@ -16,184 +15,16 @@
               </div>
 
             </div><br>
-            <label for="lastname">Last Name</label><br>
-            <input type="text" id="lastname" name="lastname" class="inputstyle" required [(ngModel)]="lastName"
-              #lname="ngModel">
+            <label for="user">User Name</label><br>
+            <input type="text" id="user" name="user" class="inputstyle" required [(ngModel)]="User" #uname="ngModel">
 
-            <div *ngIf="lname.invalid && (lname.dirty || lname.touched)" class="alertdanger">
+            <div *ngIf="uname.invalid && (uname.dirty || uname.touched)" class="alertdanger">
 
-              <div *ngIf="lname.errors.required">
-                Last Name is required.
-              </div>
-
-            </div><br>
-            <label for="gender">Gender</label><br>
-            <input id="male" type="radio" class="custom-control-input" value="male" name="male" required
-              [(ngModel)]="Gender" #gname="ngModel">
-            <label class="custom-control-label" for="male">Male</label>
-            <input id="female" type="radio" class="custom-control-input" value="female" name="female" required
-              [(ngModel)]="Gender" #gname="ngModel">
-            <label class="custom-control-label" for="male">Female</label>
-            <div *ngIf="gname.invalid && (gname.dirty || gname.touched)" class="alertdanger">
-
-              <div *ngIf="gname.errors.required">
-                Gender is required.
-              </div>
-
-            </div><br><br>
-            <label for="Email">Email</label><br>
-            <input type="text" id="Email" name="Email" class="inputstyle" required [(ngModel)]="Email" #ename="ngModel">
-
-            <div *ngIf="ename.invalid && (ename.dirty || ename.touched)" class="alertdanger">
-
-              <div *ngIf="ename.errors.required">
+              <div *ngIf="uname.errors.required">
                 Email Name is required.
               </div>
 
             </div><br>
-            <label for="phonenumber">Phone Number</label><br>
-            <input type="number" id="phonenumber" name="phonenumber" class="inputstyle" required
-              [(ngModel)]="phoneNumber" #pname="ngModel">
-
-            <div *ngIf="pname.invalid && (pname.dirty || pname.touched)" class="alertdanger">
-
-              <div *ngIf="pname.errors.required">
-                Phone Number is required.
-              </div>
-
-            </div><br>
-            <label for="photo">photo</label><br>
-            <input type="file" id="photo" name="photo" class="inputstyle" required [(ngModel)]="Photo"
-              #photoname="ngModel">
-
-            <div *ngIf="photoname.invalid && (photoname.dirty || photoname.touched)" class="alertdanger">
-
-              <div *ngIf="photoname.errors.required">
-                Photo is required.
-              </div>
-
-            </div><br>
-            <label for="qualifaction">Qualification</label><br>
-            <select id="qualifaction" name="qualifaction" class="inputstyle" required [(ngModel)]="Qualifaction.qual"
-              #qname="ngModel">
-              <option *ngFor="let q of qualifactions" [value]="q">{{q}}</option>
-            </select>
-            <div *ngIf="qname.invalid && (qname.dirty || qname.touched)" class="alertdanger">
-
-              <div *ngIf="qname.errors.required">
-                Qualification is required.
-              </div>
-
-            </div><br>
-
-
-            <label for="occupation">Occuaption</label><br>
-            <input type="text" id="occupation" name="occupation" class="inputstyle" required [(ngModel)]="Occuaption"
-              #oname="ngModel">
-
-            <div *ngIf="oname.invalid && (oname.dirty || oname.touched)" class="alertdanger">
-
-              <div *ngIf="oname.errors.required">
-                Occuaption is required.
-              </div>
-
-            </div><br>
-            <label for="date">Date Of Birth</label><br>
-            <input type="date" id="dateofbirth" data-format='YYYY-MM-DD' name="dateofbirth" class="inputstyle" required
-              [(ngModel)]="dateofbirth" #dname="ngModel">
-
-            <div *ngIf="dname.invalid && (dname.dirty || dname.touched)" class="alertdanger">
-
-              <div *ngIf="dname.errors.required">
-                Date Of Birth is required.
-              </div>
-
-            </div><br>
-            <label for="adress1">Address1</label><br>
-            <input type="text" id="Address1" name="Address1" class="inputstyle" required [(ngModel)]="Address1"
-              #a1name="ngModel">
-
-            <div *ngIf="a1name.invalid && (a1name.dirty || a1name.touched)" class="alertdanger">
-
-              <div *ngIf="a1name.errors.required">
-                Address1 is required.
-              </div>
-
-            </div><br>
-            <label for="adress2">Address2</label><br>
-            <input type="text" id="Address2" name="Address2" class="inputstyle" required [(ngModel)]="Address2"
-              #a2name="ngModel">
-
-            <div *ngIf="a2name.invalid && (a2name.dirty || a2name.touched)" class="alertdanger">
-
-              <div *ngIf="a2name.errors.required">
-                Address2 is required.
-              </div>
-
-            </div><br>
-            <label for="city">City</label><br>
-            <input type="text" id="city" name="city" class="inputstyle" required [(ngModel)]="city" #cname="ngModel">
-
-            <div *ngIf="cname.invalid && (cname.dirty || cname.touched)" class="alertdanger">
-
-              <div *ngIf="cname.errors.required">
-                City is required.
-              </div>
-
-            </div><br>
-
-            <label for="state">state</label>
-            <select id="state" name="state" class="inputstyle" required [(ngModel)]="user.state" #statename="ngModel">
-              <option *ngFor="let s of states" [value]="s">{{s}}</option>
-            </select>
-
-            <div *ngIf="statename.errors && statename.touched" class="alertdanger">
-              <div *ngIf="statename.errors.required">state is required.</div>
-            </div><br>
-            <label for="country">Country</label>
-            <select id="country" name="country" class="inputstyle" required [(ngModel)]="countrynames.country"
-              #countryname="ngModel">
-              <option *ngFor="let c of countryes" [value]="c">{{c}}</option>
-            </select>
-
-            <div *ngIf="countryname.errors && countryname.touched" class="alertdanger">
-              <div *ngIf="countryname.errors.required">state is required.</div>
-            </div><br>
-            <label for="pincode">PinCode</label><br>
-            <input type="number" id="pincode" name="pincode" class="inputstyle" required [(ngModel)]="PinCode"
-              #pinname="ngModel">
-
-            <div *ngIf="pinname.invalid && (pinname.dirty || pinname.touched)" class="alertdanger">
-
-              <div *ngIf="pinname.errors.required">
-                PinCode is required.
-              </div>
-
-            </div><br>
-            <label for="status">Status</label><br>
-            <input type="text" id="status" name="status" class="inputstyle" required [(ngModel)]="Status"
-              #statusname="ngModel">
-
-            <div *ngIf="statusname.invalid && (statusname.dirty || statusname.touched)" class="alertdanger">
-
-              <div *ngIf="statusname.errors.required">
-                Status is required.
-              </div>
-
-            </div><br>
-            <label for="privilage">Privilage</label><br>
-            <input type="text" id="privilage" name="privilage" class="inputstyle" required [(ngModel)]="Privilage"
-              #privilagename="ngModel">
-
-            <div *ngIf="privilagename.invalid && (privilagename.dirty || privilagename.touched)" class="alertdanger">
-
-              <div *ngIf="privilagename.errors.required">
-                Privilage is required.
-              </div>
-
-            </div><br>
-
-
             <label for="password">Password</label><br>
             <input type="password" id="password" name="password" class="inputstyle" required [(ngModel)]="password"
               #passname="ngModel">
@@ -210,7 +41,7 @@
 
         </div>
         <br>
-        <button type="submit" [disabled]="loginForm.invalid">Submit</button>
+        <button (click)="regestration()" [disabled]="loginForm.invalid">SignUp</button><span class="load" *ngIf='showLoading'>Loading....</span>
 
       </div>
 
@@ -218,11 +49,3 @@
 
   </div>
 </div>
-
-
-
-<!-- 
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
--->

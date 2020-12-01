@@ -1,46 +1,58 @@
 import { Component, OnInit } from '@angular/core';
 import { from } from 'rxjs';
-import { DatePipe } from '@angular/common'
+import { DatePipe , Location} from '@angular/common'
+import { SignUp } from '../apidetails';
+import { ApiInterfaceService } from '../api-interface.service';
+import { HttpErrorResponse } from '@angular/common/http';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUPComponent implements OnInit {
-  lastName : String = '';
-  password : String = '';
-  firstName : String = '';
-  Gender: String = '';
-  Email: String = '';
-  phoneNumber:number;
-  Photo: String = '';
-  // Qualifaction:String = '';
-  Occuaption:String = '';
-  dateofbirth:String;
-  Address1:String = '';
-  Address2:String = '';
-  city:String = '';
-  // state:String = '';
-  Country:String = '';
-  PinCode:number;
-  Status:String = '';
-  Privilage:String = '';
-  qualifactions=['Bsc','B.tech']
-  Qualifaction={qname:this.qualifactions[0]}
   
-  states = ['A.P', 'T.S', 'T.M'];
-
-  user = {state: this.states[0]};
-  countryes = ['India','U.S','U.K']
-  countrynames = {country:this.countryes[0]}
-  pipe = new DatePipe('en-US');
-  now = Date.now();
-    
-  mySimpleFormat = this.pipe.transform(this.now, 'MM/dd/yyyy');
-  myShortFormat = this.pipe.transform(this.now, 'short');
-  constructor() { }
+  password : String = '';
+  
+  User: String = '';
+  name : String = '';
+  
+  signUpData:SignUp
+  showLoading : boolean;
+  constructor(private service: ApiInterfaceService, private _location: Location) { }
 
   ngOnInit() {
   }
+  regestration() {
+    this.showLoading =true;
+    const body = {
+      "name" : this.name,
+      "email": this.User,
+      "password":this.password
+    }
 
+    this.service.regestration(body).subscribe(res => {
+      console.log(res)  
+      this.signUpData = res
+      if (res.success) {
+        alert("Regestration successfull");
+       this._location.back();
+      } else {
+        alert("Error occured");
+      }
+      this.showLoading =false;
+    }, 
+      (err: HttpErrorResponse) => {
+        if (err.error instanceof Error) {
+          console.log("Client-side error occured.");
+        } else {
+          console.log("Server-side error occured.");
+        }
+        
+        alert(err.error.error);
+        this.showLoading =false;
+      }
+    );
+
+  }
+  
 }
